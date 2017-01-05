@@ -23,8 +23,6 @@ function UsersCtrl($scope, Session) {"use strict";
 
         Session.register(user.email, user.password, user.confirm_password)
             .then(function(response) {
-               console.log('fdsfdsf');
-               console.log(response);
                $scope.authError = response;
             }, function(response) {
                 var errors = '';
