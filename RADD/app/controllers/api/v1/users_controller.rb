@@ -11,7 +11,7 @@ class Api::V1::UsersController < Api::V1::BaseController
       sign_in(@user)
       respond_with @user, :location => api_users_path
     else
-      Rails.logger.info "Teste123:#{@user.errors.messages.inspect}"
+      puts "Teste123:#{@user.errors.messages.inspect}"
       respond_with @user.errors, :location => api_users_path
     end
   end
